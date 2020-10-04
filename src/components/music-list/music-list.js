@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+
 import MusicCard from '../../components/music-cards/music-card'
+
 import './music-list.scss'
-import AudioPlayer from 'react-audio-player'
 
 class MusicList extends Component {
     state = {
@@ -19,17 +20,12 @@ class MusicList extends Component {
         return (
             <div className='wrapper'>
                 <h1 className='heading'>Results</h1>
-                <AudioPlayer
-                    src={this.state.song}
-                    autoPlay
-                    controls
-                />
                 <ul>
-                    {search === [] ? <p>No results for this search</p>
+                    {search.length < 1 ? <p className='empty-result'>No results for this search</p>
                         : search.map(song => (
                             <MusicCard
                                 key={song.id}
-                                picture={song.artist.picture}
+                                picture={song.album.cover}
                                 title={song.title}
                                 name={song.artist.name}
                                 duration={song.duration}
