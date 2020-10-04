@@ -3,11 +3,13 @@ $deep-blue: #0c1639;
 $basic: 400;
 $thick: 700;
 .sidebar {
-    float: left;
     background-color: $deep-blue;
     height: 100vh;
+    margin-right: 50px;
     padding: 40px 0 0 25px;
     width: 180px;
+    position: sticky;
+    top: 0;
 }
 
 .app-name h1 {

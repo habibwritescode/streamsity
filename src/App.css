@@ -8,3 +8,8 @@ body{
     background-image: linear-gradient(to right, #0d1854, #203264, #203690,#051974 );
     font-family: 'Manrope', sans-serif;
 }
+
+.main-app{
+    display: flex;
+    flex-direction: row;
+}
