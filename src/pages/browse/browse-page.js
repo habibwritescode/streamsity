@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import SearchBar from '../../components/search-bar/search-bar'
+import React from 'react';
 
-import './browse.scss'
+import SearchBar from '../../components/search-bar/search-bar';
 
-function BrowsePage() {
+import './browse.scss';
+
+const BrowsePage = () => {
     return (
         <div className='browse'>
-        <SearchBar />
+            <SearchBar />
         </div>
     )
-}
+};
 
-export default BrowsePage
+export default BrowsePage;

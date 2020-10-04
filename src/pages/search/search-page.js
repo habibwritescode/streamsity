@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import './search.scss'
+import React from 'react';
+
 import MusicList from '../../components/music-list/music-list';
 import SearchBar from '../../components/search-bar/search-bar';
 
-class SearchPage extends Component {
-    
-    render(){
-        return (
-            <div className='search'>
-                <SearchBar />
-                <MusicList />
-            </div>
-        )
-    }
-}
+import './search.scss';
 
-export default SearchPage
+
+const SearchPage = () => {
+    return (
+        <div className='search'>
+            <SearchBar />
+            <MusicList />
+        </div>
+    )
+};
+
+export default SearchPage;

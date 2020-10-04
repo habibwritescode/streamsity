@@ -1,7 +1,8 @@
 import React from 'react';
 
-function AlbumPage() {
-    return(
+
+const AlbumPage = () => {
+    return (
         <div className="albums"></div>
     )
 }

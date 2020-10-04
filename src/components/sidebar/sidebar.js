@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'
-import './sidebar.scss'
-import { ReactComponent as HomeIcon } from './icons/home.svg'
-import { ReactComponent as MenuIcon } from './icons/menu.svg'
+import { Link, NavLink } from 'react-router-dom';
 
-function Sidebar() {
+import { ReactComponent as HomeIcon } from './icons/home.svg';
+import { ReactComponent as MenuIcon } from './icons/menu.svg';
+
+import './sidebar.scss';
+
+
+const Sidebar = () => {
     return (
         <div className='sidebar'>
             <Link to='/' className='app-name'>
@@ -30,7 +33,7 @@ function Sidebar() {
                             <MenuIcon className='icon' />
                             Browse
                         </NavLink>
-                        
+
                         <NavLink
                             to='/playlist'
                             className='link'
@@ -44,7 +47,7 @@ function Sidebar() {
                         >
                             Artists
                         </NavLink>
-                        
+
                         <NavLink
                             to='/albums'
                             className='link'
@@ -60,6 +63,6 @@ function Sidebar() {
             </div>
         </div>
     )
-}
+};
 
-export default Sidebar
+export default Sidebar;

@@ -1,6 +1,9 @@
 import React from 'react';
-import { ReactComponent as PlayListIcon } from './icons/playlist.svg'
-import './music-card.scss'
+
+import { ReactComponent as PlayListIcon } from './icons/playlist.svg';
+
+import './music-card.scss';
+
 
 const MusicCard = (props) => {
     return (
@@ -22,7 +25,6 @@ const MusicCard = (props) => {
             </div>
         </li>
     )
+};
 
-}
-
-export default MusicCard
+export default MusicCard;
