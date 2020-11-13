@@ -1,14 +1,14 @@
 import React from 'react';
 
-import SearchBar from '../../components/search-bar/search-bar';
+import MusicList from '../../components/music-list/music-list';
+
 
 import './browse.scss';
 
+
 const BrowsePage = () => {
     return (
-        <div className='browse'>
-            <SearchBar />
-        </div>
+        <div></div>
     )
 };
 

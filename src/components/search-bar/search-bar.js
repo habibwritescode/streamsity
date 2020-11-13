@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from "react-router-dom";
 
 import { ReactComponent as SearchIcon } from './search.svg';
-import { fetchSongEnd } from '../../redux/actions/searchResults';
+import { fetchSongs } from '../../redux/actions/songs';
 
 import './search-bar.scss';
 
@@ -20,24 +20,20 @@ const SearchBar = () => {
     }
 
     useEffect(() => {
-        if (query.length < 1) return;
-        const onSubmit = () => {
-            fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${query}&apiKey=${API_KEY}`, {
+        if (query.trim().length < 1) return;
+            fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${query.trim()}&apiKey=${API_KEY}`, {
                 method: 'GET'
             })
                 .then(response => {
                     if (location.pathname !== '/search') {
                         history.push('/search')
                     }
+                    console.log(response.json)
                     return response.json()
                 })
                 .then(jsonResponse => {
-                    console.log(jsonResponse)
-                    console.log('jsonData', jsonResponse.data)
-                    dispatch(fetchSongEnd(jsonResponse.data))
+                    dispatch(fetchSongs(jsonResponse.data))
                 })
-        };
-        onSubmit();
     }, [query])
 
     return (

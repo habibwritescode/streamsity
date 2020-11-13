@@ -6,10 +6,47 @@
 
 body{
     background-image: linear-gradient(to right, #0d1854, #203264, #203690,#051974 );
+    /* background: url(./assets/Girl-Singing-Vocal-Range.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
     font-family: 'Manrope', sans-serif;
 }
 
 .main-app{
     display: flex;
     flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    list-style: none;
+}
+
+.artist-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.song-title {
+    font-size: 17px;
+    color: whitesmoke;
+}
+
+.artist-name {
+    margin-top: 5px;
+    font-size: 10px;
+    color: gray;
 }

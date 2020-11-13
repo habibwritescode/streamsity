@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import searchResults from './searchResults';
+import songs from './songs';
 
 
 const persistConfig = {
@@ -12,7 +12,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-    searchResults
+    songs
 });
 
 export default persistReducer(persistConfig, rootReducer);

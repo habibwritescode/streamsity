@@ -8,6 +8,7 @@ import SearchPage from './pages/search/search-page';
 import ArtistPage from './pages/artists/artists';
 import AlbumPage from './pages/albums/albums';
 import Player from './components/audio-player/audio-player';
+import SearchBar from './components/search-bar/search-bar';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div className="App">
       <div className='main-app'>
+        <SearchBar />
         <Sidebar />
         <Switch>
           {/* <Route exact path='/' component={Home} /> */}

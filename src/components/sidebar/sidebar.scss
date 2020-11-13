@@ -7,7 +7,7 @@ $thick: 700;
     height: 100vh;
     margin-right: 50px;
     padding: 40px 0 0 25px;
-    width: 180px;
+    width: 220px;
     position: sticky;
     top: 0;
 }
@@ -25,16 +25,20 @@ $thick: 700;
     color: white;
 }
 
-.first-section {
-    height: 400px;
-}
-
 .library,
 .discover {
     font-weight: $thick;
     color: $pink-color;
-    padding-top: 60px;
     font-size: 15px;
+}
+
+.library{
+    margin-top: 60px;
+}
+
+
+.discover{
+    margin-top: 50px;
 }
 
 .links-container {
