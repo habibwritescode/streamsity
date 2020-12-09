@@ -7,11 +7,14 @@ import { ReactComponent as MenuIcon } from './icons/menu.svg';
 import './sidebar.scss';
 
 
-const Sidebar = () => {
+const Sidebar = ({ open, closeNavOnLinkClick }) => {
     return (
-        <div className='sidebar'>
+        <div
+            className={`sidebar ${open ? 'sidebar-open' : 'sidebar-close'}`}
+            onClick={closeNavOnLinkClick}
+        >
             <Link to='/' className='app-name'>
-                <h1>Stream<span className='sity'>sity</span></h1>
+                <h1 id='event-target'>Stream<span className='sity'>sity</span></h1>
             </Link>
             <div>
                 <div className="first-section">
@@ -20,7 +23,9 @@ const Sidebar = () => {
                         <NavLink
                             exact
                             to='/'
+                            id='event-target'
                             className='link'
+                            activeStyle={{ color: '#ff00cd' }}
                         >
                             <HomeIcon className="icon" />
                             Home
@@ -28,7 +33,9 @@ const Sidebar = () => {
 
                         <NavLink
                             to='/browse'
+                            id='event-target'
                             className='link'
+                            activeStyle={{ color: '#ff00cd' }}
                         >
                             <MenuIcon className='icon' />
                             Browse
@@ -36,20 +43,25 @@ const Sidebar = () => {
 
                         <NavLink
                             to='/playlist'
+                            id='event-target'
                             className='link'
+                            activeStyle={{ color: '#ff00cd' }}
                         >
                             Playlist
                         </NavLink>
 
                         <NavLink
                             to='/artists'
+                            id='event-target'
                             className='link'
+                            activeStyle={{ color: '#ff00cd' }}
                         >
                             Artists
                         </NavLink>
 
                         <NavLink
                             to='/albums'
+                            id='event-target'
                             className='link'
                             activeStyle={{ color: '#ff00cd' }}
                         >

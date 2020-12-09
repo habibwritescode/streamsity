@@ -1,20 +1,15 @@
 $pink-color: #ff00cd;
 
 .search-container {
-    padding-left: 50px;
-    // padding-top: 20px;
+    background-color: #0f2a77;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 220px;
-    // border: 2px solid red;
-    height: 60px;
-    background-image: linear-gradient(to right, hsl(227, 60, 22), hsl(225, 55, 24), hsl(225, 53, 24), hsl(225, 53, 25), hsl(224, 51, 25));
-    // background-image: linear-gradient(to right, #0d1854, #203264, #203690,#051974 );
-    // background-color: indianred;
-    // width: 100%;
-    z-index: 100;
+    left: 65px;
+    height: 110px;
+    z-index: 1;
+    width: 100%;
 }
 
 input {
@@ -30,4 +25,14 @@ input {
 
 input::placeholder {
     color: whitesmoke;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .search-container {
+        left: 260px;
+        top: 0;
+        height: 80px;
+    }
 }

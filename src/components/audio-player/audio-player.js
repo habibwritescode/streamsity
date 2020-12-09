@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
+import useScreenSize from 'use-screen-size';
 
 import { fetchCurrentSong, handlePauseOrPlay, isCurrentSongPaused } from '../../redux/actions/songs';
 
@@ -14,7 +15,8 @@ const Player = () => {
     const searchResults = useSelector(state => state.songs.searchResults);
     const song = currentSongObj.preview;
     const dispatch = useDispatch();
-    const indexOfCurrentSong = searchResults.findIndex(result => result.id === currentSongObj.id);
+    const indexOfCurrentSong = searchResults ? searchResults.findIndex(result => result.id === currentSongObj.id) : '';
+    const size = useScreenSize();
 
     useEffect(() => {
         const handlePauseOrPlayInMusicCard = () => {
@@ -50,25 +52,17 @@ const Player = () => {
             autoPlay
             src={song}
             className='player'
-            onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}
-            layout='horizontal-reverse'
-            customAdditionalControls={[]}
+            layout={size.width < 768 ? 'stacked-reverse' : 'horizontal-reverse'}
+            // customAdditionalControls={[]}
             customVolumeControls={[]}
             showSkipControls={true}
             showJumpControls={false}
             onEnded={handleClickNext}
             onPause={checkIfPausedFromPlayer}
             onPlay={checkIfPausedFromPlayer}
-            CustomIcons={{
-                // play: ReactNode,
-                // pause: ReactNode,
-                // previous: ReactNode,
-                // next: ReactNode,
-                // volume: ReactNode,
-                // volumeMute: ReactNode
-            }}
+
             customAdditionalControls={
                 [song && (
                     <div className='row song-details-player'>

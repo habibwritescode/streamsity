@@ -1,9 +1,36 @@
+$white: whitesmoke;
+
 .wrapper{
+    padding-top: 20px;
     margin-top: 60px;
     margin-bottom: 110px;
+    z-index: 0;
+}
+
+.heading {
+    color: $white;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 
 .empty-result{
-    font-size: 1.3em;
-    margin-top: 5px;
+    font-size: 1em;
+    margin-top: 25px;
+    color: #d5c5a3;
+    width: 100vw;
+}
+
+.disclaimer{
+    color: #d5c5a3;
+    width: 80vw;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .disclaimer{
+        width: 60vw;
+    }
 }

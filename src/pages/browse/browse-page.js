@@ -1,8 +1,5 @@
 import React from 'react';
 
-import MusicList from '../../components/music-list/music-list';
-
-
 import './browse.scss';
 
 

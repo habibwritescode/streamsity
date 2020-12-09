@@ -4,18 +4,28 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
 body{
-    background-image: linear-gradient(to right, #0d1854, #203264, #203690,#051974 );
-    /* background: url(./assets/Girl-Singing-Vocal-Range.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-size: cover; */
+    background-color: #0f2a77;
     font-family: 'Manrope', sans-serif;
 }
 
+.side-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
 .main-app{
-    display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+    margin-left: 65px;
+    width: 90vw;
 }
 
 .row {
@@ -36,17 +46,48 @@ li{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 15px;
     margin-left: 5px;
 }
 
 .song-title {
-    font-size: 17px;
+    font-size: 13px;
     color: whitesmoke;
 }
 
 .artist-name {
     margin-top: 5px;
-    font-size: 10px;
-    color: gray;
+    font-size: 11px;
+    color: #d5c5a3;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main-app{
+        margin-left: 260px;
+    }
+
+    .artist-pic {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 20px;
+        margin-left: 5px;
+    }
+    
+    .song-title {
+        font-size: 17px;
+        color: whitesmoke;
+    }
+    
+    .artist-name {
+        margin-top: 5px;
+        font-size: 11px;
+        color: #d5c5a3;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }

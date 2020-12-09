@@ -47,7 +47,7 @@ const MusicCard = ({ selectSong, picture, title, name, duration, isCurrentSong, 
                     <div className='icon-and-duration row'>
                         <span className='duration'>{durationMins}:{durationSecs < 10 && 0}{durationSecs}</span>
                         <div className='deezer-cont'>
-                            <a href={linkToFullSong} target="_blank" onClick="event.stopPropagation()">
+                            <a href={linkToFullSong} target="_blank" onClick={(e) => e.stopPropagation()} rel="noopener noreferrer" >
                                 <DeezerIcon className='playlist' />
                             </a>
                         </div>

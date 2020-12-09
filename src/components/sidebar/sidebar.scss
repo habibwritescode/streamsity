@@ -4,17 +4,27 @@ $basic: 400;
 $thick: 700;
 .sidebar {
     background-color: $deep-blue;
-    height: 100vh;
-    margin-right: 50px;
     padding: 40px 0 0 25px;
     width: 220px;
-    position: sticky;
-    top: 0;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-open{
+        transform: translateX(0);
+}
+
+@media only screen and (max-width: 767px) {    
+    .sidebar-close{
+            transform: translateX(100%);
+            display: none;
+    }
 }
 
 .app-name h1 {
     font-size: 25px;
     color: $pink-color;
+    margin-top: 20px;
 }
 
 .app-name {
@@ -33,12 +43,12 @@ $thick: 700;
 }
 
 .library{
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 
 .discover{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .links-container {
@@ -68,5 +78,12 @@ $thick: 700;
     width: 15px;
     &:hover {
         color: $pink-color;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .app-name h1{
+        margin-top: 0;
     }
 }
