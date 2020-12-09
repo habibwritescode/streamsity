@@ -2,7 +2,8 @@ import {
     FETCH_SEARCH_END,
     FETCH_CURRENT_SONG,
     HANDLE_PAUSE_OR_PLAY,
-    IS_CURRENT_SONG_PAUSED
+    IS_CURRENT_SONG_PAUSED,
+    IS_FETCHING
 } from '../types/songs';
 
 
@@ -12,6 +13,7 @@ export function fetchSongs(songs) {
         payload: songs
     }
 }
+
 
 export function fetchCurrentSong(currentSongObj) {
     return {
@@ -30,6 +32,13 @@ export function handlePauseOrPlay(func) {
 export function isCurrentSongPaused(bool) {
     return {
         type: IS_CURRENT_SONG_PAUSED,
+        payload: bool
+    }
+}
+
+export function isFetching(bool) {
+    return {
+        type: IS_FETCHING,
         payload: bool
     }
 }

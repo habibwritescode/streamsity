@@ -1,10 +1,11 @@
-import { FETCH_SEARCH_START, FETCH_SEARCH_END, FETCH_CURRENT_SONG, HANDLE_PAUSE_OR_PLAY, IS_CURRENT_SONG_PAUSED } from '../types/songs';
+import { FETCH_SEARCH_START, FETCH_SEARCH_END, FETCH_CURRENT_SONG, HANDLE_PAUSE_OR_PLAY, IS_CURRENT_SONG_PAUSED, IS_FETCHING } from '../types/songs';
 
 const INITIAL_STATE = {
     searchResults: [],
     currentSong: '',
     handlePauseOrPlay: null,
-    isCurrentSongPaused: true
+    isCurrentSongPaused: true,
+    isFetching: false
 }
 
 export default function songs(state = INITIAL_STATE, action) {
@@ -28,6 +29,11 @@ export default function songs(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 isCurrentSongPaused: action.payload
+            }
+        case IS_FETCHING:
+            return {
+                ...state,
+                isFetching: action.payload
             }
 
         default:
