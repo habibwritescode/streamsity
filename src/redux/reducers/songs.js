@@ -1,4 +1,4 @@
-import { FETCH_SEARCH_START, FETCH_SEARCH_END, FETCH_CURRENT_SONG, HANDLE_PAUSE_OR_PLAY, IS_CURRENT_SONG_PAUSED, IS_FETCHING } from '../types/songs';
+import {FETCH_SEARCH_END, FETCH_CURRENT_SONG, HANDLE_PAUSE_OR_PLAY, IS_CURRENT_SONG_PAUSED, IS_FETCHING } from '../types/songs';
 
 const INITIAL_STATE = {
     searchResults: [],
@@ -35,7 +35,6 @@ export default function songs(state = INITIAL_STATE, action) {
                 ...state,
                 isFetching: action.payload
             }
-
         default:
             return state
     }
