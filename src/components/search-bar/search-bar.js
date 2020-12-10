@@ -36,7 +36,7 @@ const SearchBar = () => {
                 dispatch(fetchSongs(jsonResponse.data))
                 dispatch(isFetching(false))
             })
-    }, [query, dispatch, location.pathname, history])
+    }, [query])
 
     return (
         <div className='search-container'>
