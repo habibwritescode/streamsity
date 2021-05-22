@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cra-template": "1.0.3",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-audio-player": "^0.13.0",
     "react-dom": "^16.13.1",
@@ -20,6 +19,7 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.33.0",
     "use-screen-size": "^1.1.0"
   },
   "scripts": {
