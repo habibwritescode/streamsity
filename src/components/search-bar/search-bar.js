@@ -23,7 +23,7 @@ const SearchBar = () => {
     useEffect(() => {
         if (query.trim().length < 1) return;
         dispatch(isFetching(true))
-        fetch(`https://api.deezer.com/search/?q=${query.trim()}&apiKey=${API_KEY}`, {
+        fetch(`https://habib-cors.herokuapp.com/https://api.deezer.com/search/?q=${query.trim()}&apiKey=${API_KEY}`, {
             method: 'GET'
         })
             .then(response => {
